@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-x-hidden px-4 sm:px-6 lg:px-8"
     >
       {/* ── Background Decorative Elements ── */}
       {/* Large soft teal glow — top left */}
@@ -136,9 +136,9 @@ const Hero = () => {
             ></div>
 
             {/* Person image container */}
-            <div className="relative animate-float">
+            <div className="relative w-full max-w-sm mx-auto animate-float">
               <div
-                className="relative rounded-[32px] overflow-hidden border border-text-body/5 w-full max-w-[420px] aspect-[21/25] lg:w-[420px] lg:h-[500px]"
+                className="relative rounded-3xl overflow-hidden border border-text-body/5 w-full aspect-[4/5] lg:max-w-[420px] lg:aspect-[21/25]"
               >
                 <img
                   src={assets.heroPerson}
@@ -154,7 +154,7 @@ const Hero = () => {
               </div>
 
               {/* Floating badge — top right of image (OS Dark Panel) */}
-              <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-panel-dark text-bg-primary rounded-2xl px-3 py-2 sm:px-4 sm:py-3 border border-white/10 flex items-center gap-2 shadow-xl">
+              <div className="absolute top-3 right-3 max-w-[150px] scale-90 sm:scale-100 sm:top-4 sm:right-4 bg-panel-dark text-bg-primary rounded-2xl px-3 py-2 sm:px-4 sm:py-3 border border-white/10 flex items-center gap-2 shadow-xl">
                 <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-accent-teal flex items-center justify-center text-white flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M12 20h9"/>
@@ -168,7 +168,7 @@ const Hero = () => {
               </div>
 
               {/* Floating badge — bottom left of image (Sand Gray Panel) */}
-              <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 bg-bg-secondary rounded-2xl px-3 py-2 sm:px-4 sm:py-3 border border-text-body/5 flex items-center gap-2 shadow-xl">
+              <div className="absolute bottom-3 left-3 max-w-[150px] scale-90 sm:scale-100 sm:bottom-4 sm:left-4 bg-bg-secondary rounded-2xl px-3 py-2 sm:px-4 sm:py-3 border border-text-body/5 flex items-center gap-2 shadow-xl">
                 <div className="flex -space-x-2">
                   {[assets.avatars?.[0], assets.avatars?.[1], assets.avatars?.[2]].filter(Boolean).map((av, i) => (
                     <img

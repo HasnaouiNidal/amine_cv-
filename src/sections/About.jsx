@@ -38,7 +38,7 @@ const CheckIcon = () => (
 
 const About = () => {
   return (
-    <section id="about" className="relative py-24 overflow-hidden">
+    <section id="about" className="relative py-24 overflow-x-hidden px-4 sm:px-6 lg:px-8">
       {/* Background glow */}
       <div
         className="absolute top-1/2 right-0 w-[400px] h-[400px] rounded-full blur-[100px] pointer-events-none -translate-y-1/2"
@@ -57,25 +57,25 @@ const About = () => {
               aria-hidden="true"
             ></div>
 
-            <div className="relative">
+            <div className="relative w-full max-w-sm mx-auto">
               {/* Main image */}
-              <div className="rounded-[28px] overflow-hidden border border-text-body/5 w-full max-w-[460px] aspect-[23/27] md:w-[460px] md:h-[540px]">
+              <div className="rounded-[28px] overflow-hidden border border-text-body/5 w-full aspect-[4/5] md:aspect-[23/27] md:max-w-[460px] md:h-[540px]">
                 <img
                   src={assets.aboutPerson}
                   alt="About Amine"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
               </div>
 
               {/* Floating experience badge (Sand Gray Panel) */}
-              <div className="absolute -bottom-3 -right-3 sm:-bottom-5 sm:-right-5 bg-bg-secondary rounded-2xl p-3 sm:p-5 border border-text-body/5 shadow-xl text-center">
-                <p className="font-heading font-bold text-accent-navy text-[32px] leading-tight">5+</p>
-                <p className="text-text-muted text-[13px] mt-0.5">Years of<br/>Experience</p>
+              <div className="absolute bottom-4 right-3 max-w-[160px] scale-90 sm:scale-100 sm:bottom-6 sm:right-6 bg-bg-secondary rounded-2xl p-3 sm:p-5 border border-text-body/5 shadow-xl text-center">
+                <p className="font-heading font-bold text-accent-navy text-[28px] sm:text-[32px] leading-tight">5+</p>
+                <p className="text-text-muted text-[11px] sm:text-[13px] mt-0.5">Years of<br/>Experience</p>
               </div>
 
               {/* Floating tools badge (OS Dark Panel) */}
-              <div className="absolute -top-3 -left-3 sm:-top-5 sm:-left-5 bg-panel-dark text-bg-primary rounded-2xl px-3 py-2 sm:px-5 sm:py-4 border border-white/10 shadow-xl flex items-center gap-2 sm:gap-3">
+              <div className="absolute top-4 left-3 max-w-[160px] scale-90 sm:scale-100 sm:top-6 sm:left-6 bg-panel-dark text-bg-primary rounded-2xl px-3 py-2 sm:px-5 sm:py-4 border border-white/10 shadow-xl flex items-center gap-2 sm:gap-3">
                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-accent-teal flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">✦</div>
                 <div>
                   <p className="text-bg-primary font-bold text-[11px] sm:text-[13px] leading-tight">Full Stack</p>
