@@ -34,7 +34,7 @@ const QuoteIcon = () => (
 
 const TestimonialCard = ({ name, role, avatar, rating, text }) => {
   return (
-    <article className="bg-bg-primary rounded-card p-7 flex flex-col gap-5 card-hover border border-text-body/5 h-full">
+    <article className="bg-bg-primary rounded-card p-5 sm:p-7 flex flex-col gap-5 card-hover border border-text-body/5 h-full">
       {/* Quote icon */}
       <QuoteIcon />
 

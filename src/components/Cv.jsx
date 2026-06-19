@@ -24,7 +24,7 @@ const Cv = () => {
   return (
     <div className="cv-page min-h-screen bg-nidam-bgPrimary py-8 md:py-16 px-4 sm:px-6 lg:px-8 print:py-0 print:px-0">
       {/* Floating Action Bar (Hidden in Print) */}
-      <div className="max-w-4xl mx-auto mb-6 flex justify-between items-center print:hidden">
+      <div className="max-w-4xl mx-auto mb-6 flex flex-col sm:flex-row gap-4 justify-between items-center print:hidden">
         <a 
           href="/" 
           className="inline-flex items-center gap-2 text-nidam-textMuted hover:text-nidam-accentNavy transition-colors text-sm font-medium"
@@ -52,7 +52,7 @@ const Cv = () => {
       <article className="max-w-4xl mx-auto bg-nidam-bgPrimary border border-[#1C1C1C]/10 rounded-2xl shadow-xl overflow-hidden cv-print-card print:border-none print:shadow-none print:rounded-none">
         
         {/* Header Block */}
-        <header className="p-8 md:p-12 border-b border-[#1C1C1C]/10 bg-nidam-bgSecondary/20">
+        <header className="p-5 sm:p-8 md:p-12 border-b border-[#1C1C1C]/10 bg-nidam-bgSecondary/20">
           <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-6">
             <div>
               <h1 className="font-serif-nidam text-nidam-accentNavy text-4xl sm:text-5xl font-bold tracking-tight mb-2">
@@ -88,7 +88,7 @@ const Cv = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 border-t border-[#1C1C1C]/5">
           
           {/* Left / Sidebar Column */}
-          <aside className="md:col-span-1 bg-nidam-bgSecondary/30 p-8 border-r border-[#1C1C1C]/10 print:bg-transparent print:p-6 print:border-r">
+          <aside className="md:col-span-1 bg-nidam-bgSecondary/30 p-5 sm:p-8 border-b md:border-b-0 md:border-r border-[#1C1C1C]/10 print:bg-transparent print:p-6 print:border-r">
             
             {/* OS Dark Contact Panel */}
             <div className="bg-nidam-panelDark text-nidam-bgPrimary rounded-xl p-5 mb-8 shadow-sm print:shadow-none print:bg-nidam-panelDark print:-mx-2">
@@ -96,29 +96,29 @@ const Cv = () => {
                 Contact Details
               </h3>
               <ul className="flex flex-col gap-3 text-[13px] font-sans-nidam text-nidam-bgPrimary/80">
-                <li className="flex items-center gap-2">
-                  <span className="text-nidam-accentTeal" aria-hidden="true">✉</span>
-                  <a href={`mailto:${personal.email}`} className="hover:text-nidam-accentGold transition-colors truncate">
+                <li className="flex items-center gap-2 min-w-0">
+                  <span className="text-nidam-accentTeal flex-shrink-0" aria-hidden="true">✉</span>
+                  <a href={`mailto:${personal.email}`} className="hover:text-nidam-accentGold transition-colors truncate min-w-0">
                     {personal.email}
                   </a>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-nidam-accentTeal" aria-hidden="true">🌐</span>
-                  <span className="truncate">{personal.website}</span>
+                <li className="flex items-center gap-2 min-w-0">
+                  <span className="text-nidam-accentTeal flex-shrink-0" aria-hidden="true">🌐</span>
+                  <span className="truncate min-w-0">{personal.website}</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <span className="text-nidam-accentTeal" aria-hidden="true">📍</span>
-                  <span>{personal.location}</span>
+                <li className="flex items-center gap-2 min-w-0">
+                  <span className="text-nidam-accentTeal flex-shrink-0" aria-hidden="true">📍</span>
+                  <span className="truncate min-w-0">{personal.location}</span>
                 </li>
-                <li className="flex items-center gap-2 pt-2 border-t border-white/10">
-                  <GitHubIcon />
-                  <a href={`https://${personal.github}`} target="_blank" rel="noopener noreferrer" className="hover:text-nidam-accentGold transition-colors truncate">
+                <li className="flex items-center gap-2 pt-2 border-t border-white/10 min-w-0">
+                  <span className="flex-shrink-0"><GitHubIcon /></span>
+                  <a href={`https://${personal.github}`} target="_blank" rel="noopener noreferrer" className="hover:text-nidam-accentGold transition-colors truncate min-w-0">
                     {personal.github}
                   </a>
                 </li>
-                <li className="flex items-center gap-2">
-                  <LinkedInIcon />
-                  <a href={`https://${personal.linkedin}`} target="_blank" rel="noopener noreferrer" className="hover:text-nidam-accentGold transition-colors truncate">
+                <li className="flex items-center gap-2 min-w-0">
+                  <span className="flex-shrink-0"><LinkedInIcon /></span>
+                  <a href={`https://${personal.linkedin}`} target="_blank" rel="noopener noreferrer" className="hover:text-nidam-accentGold transition-colors truncate min-w-0">
                     {personal.linkedin}
                   </a>
                 </li>
@@ -180,7 +180,7 @@ const Cv = () => {
           </aside>
 
           {/* Right / Main Content Column */}
-          <main className="md:col-span-2 p-8 print:p-6 print:pl-8">
+          <main className="md:col-span-2 p-5 sm:p-8 print:p-6 print:pl-8">
             
             {/* Experience */}
             <section className="mb-10">
@@ -196,7 +196,7 @@ const Cv = () => {
                     <span className="text-[18px] font-mono font-light text-nidam-accentNavy/20 select-none pt-0.5">
                       0{idx + 1}
                     </span>
-                    <div className="flex-1 flex flex-col gap-2">
+                    <div className="flex-1 min-w-0 flex flex-col gap-2">
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
                         <div>
                           <h3 className="font-sans-nidam text-[#0f1e36] text-[17px] font-bold leading-snug">
@@ -238,7 +238,7 @@ const Cv = () => {
                     <span className="text-[18px] font-mono font-light text-nidam-accentNavy/20 select-none pt-0.5">
                       0{idx + 1}
                     </span>
-                    <div className="flex-1 flex flex-col gap-2">
+                    <div className="flex-1 min-w-0 flex flex-col gap-2">
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
                         <div>
                           <h3 className="font-sans-nidam text-[#0f1e36] text-[16px] font-bold leading-snug">

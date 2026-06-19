@@ -35,8 +35,8 @@ const ProjectCard = ({ title, description, image, tags, category, liveUrl, githu
           </span>
         </div>
 
-        {/* Action links — appear on hover */}
-        <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+        {/* Action links — appear on hover on desktop, always visible on mobile/tablet */}
+        <div className="absolute top-4 right-4 flex gap-2 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-300 lg:translate-y-2 lg:group-hover:translate-y-0 opacity-100 translate-y-0">
           {githubUrl && (
             <a
               href={githubUrl}

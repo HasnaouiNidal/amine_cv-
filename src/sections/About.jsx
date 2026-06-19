@@ -5,10 +5,10 @@ import { assets } from '../data/assets';
 
 // Individual stat card
 const StatCard = ({ value, label, icon }) => (
-  <div className="bg-bg-secondary rounded-card p-6 flex flex-col items-center justify-center gap-2 text-center card-hover border border-text-body/5 hover:border-accent-teal/25">
-    <span className="text-2xl" aria-hidden="true">{icon}</span>
-    <p className="font-heading font-bold text-accent-navy text-[34px] leading-tight">{value}</p>
-    <p className="text-text-muted text-[14px]">{label}</p>
+  <div className="bg-bg-secondary rounded-card p-4 sm:p-6 flex flex-col items-center justify-center gap-2 text-center card-hover border border-text-body/5 hover:border-accent-teal/25">
+    <span className="text-xl sm:text-2xl" aria-hidden="true">{icon}</span>
+    <p className="font-heading font-bold text-accent-navy text-[28px] sm:text-[34px] leading-tight">{value}</p>
+    <p className="text-text-muted text-[13px] sm:text-[14px]">{label}</p>
   </div>
 );
 
@@ -59,7 +59,7 @@ const About = () => {
 
             <div className="relative">
               {/* Main image */}
-              <div className="rounded-[28px] overflow-hidden border border-text-body/5" style={{ width: '460px', height: '540px', maxWidth: '100%' }}>
+              <div className="rounded-[28px] overflow-hidden border border-text-body/5 w-full max-w-[460px] aspect-[23/27] md:w-[460px] md:h-[540px]">
                 <img
                   src={assets.aboutPerson}
                   alt="About Amine"
@@ -69,17 +69,17 @@ const About = () => {
               </div>
 
               {/* Floating experience badge (Sand Gray Panel) */}
-              <div className="absolute -bottom-5 -right-5 bg-bg-secondary rounded-2xl p-5 border border-text-body/5 shadow-xl text-center">
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-5 sm:-right-5 bg-bg-secondary rounded-2xl p-3 sm:p-5 border border-text-body/5 shadow-xl text-center">
                 <p className="font-heading font-bold text-accent-navy text-[32px] leading-tight">5+</p>
                 <p className="text-text-muted text-[13px] mt-0.5">Years of<br/>Experience</p>
               </div>
 
               {/* Floating tools badge (OS Dark Panel) */}
-              <div className="absolute -top-5 -left-5 bg-panel-dark text-bg-primary rounded-2xl px-5 py-4 border border-white/10 shadow-xl flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-accent-teal flex items-center justify-center text-white font-bold text-lg">✦</div>
+              <div className="absolute -top-3 -left-3 sm:-top-5 sm:-left-5 bg-panel-dark text-bg-primary rounded-2xl px-3 py-2 sm:px-5 sm:py-4 border border-white/10 shadow-xl flex items-center gap-2 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-accent-teal flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0">✦</div>
                 <div>
-                  <p className="text-bg-primary font-bold text-[13px] leading-tight">Full Stack</p>
-                  <p className="text-bg-secondary/70 text-[11px]">Design + Code</p>
+                  <p className="text-bg-primary font-bold text-[11px] sm:text-[13px] leading-tight">Full Stack</p>
+                  <p className="text-bg-secondary/70 text-[10px] sm:text-[11px]">Design + Code</p>
                 </div>
               </div>
             </div>

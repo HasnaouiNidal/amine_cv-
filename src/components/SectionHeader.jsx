@@ -19,7 +19,7 @@ const SectionHeader = ({
       )}
       {title && (
         <h2
-          className={`font-heading font-bold text-accent-navy text-[32px] leading-[40px] sm:text-[36px] sm:leading-[44px] lg:text-section lg:leading-[48px] ${titleClassName}`}
+          className={`font-heading font-bold text-accent-navy text-[26px] leading-[34px] sm:text-[36px] sm:leading-[44px] lg:text-section lg:leading-[48px] ${titleClassName}`}
         >
           {title}
           <span className="inline-block w-1.5 h-1.5 bg-accent-teal rounded-full ml-2 align-middle"></span>

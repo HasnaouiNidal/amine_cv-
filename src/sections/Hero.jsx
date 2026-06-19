@@ -22,9 +22,9 @@ const ScrollIndicator = () => (
 
 // Stats badge
 const StatBadge = ({ value, label }) => (
-  <div className="bg-bg-secondary rounded-2xl px-5 py-3 text-center border border-text-body/5">
-    <p className="font-heading font-bold text-accent-navy text-[22px] leading-tight">{value}</p>
-    <p className="text-text-muted text-[12px] mt-0.5">{label}</p>
+  <div className="bg-bg-secondary rounded-2xl px-3.5 py-2 sm:px-5 sm:py-3 text-center border border-text-body/5 min-w-[90px] sm:min-w-0">
+    <p className="font-heading font-bold text-accent-navy text-[18px] sm:text-[22px] leading-tight">{value}</p>
+    <p className="text-text-muted text-[11px] sm:text-[12px] mt-0.5">{label}</p>
   </div>
 );
 
@@ -95,7 +95,7 @@ const Hero = () => {
 
             {/* Heading */}
             <div className="flex flex-col gap-3">
-              <h1 className="font-heading font-bold text-accent-navy text-[42px] leading-[50px] sm:text-[52px] sm:leading-[62px] lg:text-hero lg:leading-[72px]">
+              <h1 className="font-heading font-bold text-accent-navy text-[32px] leading-[40px] sm:text-[52px] sm:leading-[62px] lg:text-hero lg:leading-[72px]">
                 Crafting{' '}
                 <span className="gradient-text">Digital</span>{' '}
                 Experiences That Matter
@@ -119,7 +119,7 @@ const Hero = () => {
             </div>
 
             {/* Stats row */}
-            <div className="flex gap-4 mt-2">
+            <div className="flex flex-wrap gap-3 sm:gap-4 mt-2">
               <StatBadge value="5+" label="Years Exp." />
               <StatBadge value="80+" label="Projects" />
               <StatBadge value="97%" label="Satisfaction" />
@@ -138,8 +138,7 @@ const Hero = () => {
             {/* Person image container */}
             <div className="relative animate-float">
               <div
-                className="relative rounded-[32px] overflow-hidden border border-text-body/5"
-                style={{ width: '420px', height: '500px', maxWidth: '100%' }}
+                className="relative rounded-[32px] overflow-hidden border border-text-body/5 w-full max-w-[420px] aspect-[21/25] lg:w-[420px] lg:h-[500px]"
               >
                 <img
                   src={assets.heroPerson}
@@ -155,21 +154,21 @@ const Hero = () => {
               </div>
 
               {/* Floating badge — top right of image (OS Dark Panel) */}
-              <div className="absolute -top-4 -right-4 bg-panel-dark text-bg-primary rounded-2xl px-4 py-3 border border-white/10 flex items-center gap-2 shadow-xl">
-                <div className="w-9 h-9 rounded-xl bg-accent-teal flex items-center justify-center text-white">
+              <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 bg-panel-dark text-bg-primary rounded-2xl px-3 py-2 sm:px-4 sm:py-3 border border-white/10 flex items-center gap-2 shadow-xl">
+                <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-accent-teal flex items-center justify-center text-white flex-shrink-0">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M12 20h9"/>
                     <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
                   </svg>
                 </div>
                 <div>
-                  <p className="text-bg-primary font-bold text-[13px] leading-tight">Design Expert</p>
-                  <p className="text-bg-secondary/70 text-[11px]">Figma & React</p>
+                  <p className="text-bg-primary font-bold text-[11px] sm:text-[13px] leading-tight">Design Expert</p>
+                  <p className="text-bg-secondary/70 text-[10px] sm:text-[11px]">Figma & React</p>
                 </div>
               </div>
 
               {/* Floating badge — bottom left of image (Sand Gray Panel) */}
-              <div className="absolute -bottom-4 -left-4 bg-bg-secondary rounded-2xl px-4 py-3 border border-text-body/5 flex items-center gap-2 shadow-xl">
+              <div className="absolute -bottom-3 -left-3 sm:-bottom-4 sm:-left-4 bg-bg-secondary rounded-2xl px-3 py-2 sm:px-4 sm:py-3 border border-text-body/5 flex items-center gap-2 shadow-xl">
                 <div className="flex -space-x-2">
                   {[assets.avatars?.[0], assets.avatars?.[1], assets.avatars?.[2]].filter(Boolean).map((av, i) => (
                     <img
@@ -181,12 +180,12 @@ const Hero = () => {
                   ))}
                 </div>
                 <div>
-                  <p className="text-accent-navy font-bold text-[13px] leading-tight">Happy Clients</p>
+                  <p className="text-accent-navy font-bold text-[11px] sm:text-[13px] leading-tight">Happy Clients</p>
                   <div className="flex items-center gap-1">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="#D4AF37" className="flex-shrink-0">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#D4AF37" className="flex-shrink-0">
                       <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                     </svg>
-                    <p className="text-text-muted text-[11px]">4.9/5 · 80+ reviews</p>
+                    <p className="text-text-muted text-[10px] sm:text-[11px]">4.9/5</p>
                   </div>
                 </div>
               </div>
